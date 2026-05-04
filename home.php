@@ -57,7 +57,7 @@ get_header();
       </div>
       <div class="row">
         <div class="col">
-          <img class="image info__image" src="./img/avenida-jardines-de-morelos.webp" alt="Jardines de Morelos Ecatepec - Avenida Jardines de Morelos">
+          <img class="image info__image" src="<?php echo DIRECTORY_THEME_URI; ?>/img/avenida-jardines-de-morelos.webp" alt="Jardines de Morelos Ecatepec - Avenida Jardines de Morelos">
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@ get_header();
             <h4>Por Avenida Central</h4>
             <div class="row">
               <div class="col-12 col-lg-6">
-                <img class="image instructions__image" src="./img/metro-ciudad-azteca.webp" alt="Jardines de Morelos Ecatepec - Cómo llegar desde Avenida Central - Estación Ciudad Azteca">
+                <img class="image instructions__image" src="<?php echo DIRECTORY_THEME_URI; ?>/img/metro-ciudad-azteca.webp" alt="Jardines de Morelos Ecatepec - Cómo llegar desde Avenida Central - Estación Ciudad Azteca">
               </div>
               <div class="col-12 col-lg-6">
                 <p>
