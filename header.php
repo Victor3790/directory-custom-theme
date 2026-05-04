@@ -9,5 +9,7 @@
     <title>Jardines de Morelos Ecatepec</title>
     <link rel="icon" href="img/fav-icon.png" sizes="32x32">
     <meta name="description" content="Descubre Jardines de Morelos, Ecatepec, un fraccionamiento con historia y tradición. Aprende cómo llegar y conoce más sobre su ubicación y características.">
+
+    <?php wp_head(); ?>
 </head>
 <body>
