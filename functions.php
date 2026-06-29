@@ -46,17 +46,17 @@ add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_scripts' );
  */
 function directory_register_post_types() {
 	$args = array(
-		'label'               => __( 'Directory Items', 'directory' ),
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_rest'        => true,
-		'has_archive'         => true,
-		'hierarchical'        => false,
-		'supports'            => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-		'rewrite'             => array( 'slug' => 'directory-item' ),
-		'menu_icon'           => 'dashicons-list-view',
+		'label'             => __( 'Directory Items', 'directory' ),
+		'public'            => true,
+		'show_ui'           => true,
+		'show_in_menu'      => true,
+		'show_in_nav_menus' => true,
+		'show_in_rest'      => true,
+		'has_archive'       => true,
+		'hierarchical'      => false,
+		'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+		'rewrite'           => array( 'slug' => 'directory-item' ),
+		'menu_icon'         => 'dashicons-list-view',
 	);
 	register_post_type( 'directory_item', $args );
 }
@@ -67,14 +67,14 @@ add_action( 'init', 'directory_register_post_types' );
  */
 function directory_register_taxonomies() {
 	$args = array(
-		'label'              => __( 'Directory Categories', 'directory' ),
-		'public'             => true,
-		'show_ui'            => true,
-		'show_in_menu'       => true,
-		'show_in_nav_menus'  => true,
-		'show_in_rest'       => true,
-		'hierarchical'       => true,
-		'rewrite'            => array( 'slug' => 'directory-category' ),
+		'label'             => __( 'Directory Categories', 'directory' ),
+		'public'            => true,
+		'show_ui'           => true,
+		'show_in_menu'      => true,
+		'show_in_nav_menus' => true,
+		'show_in_rest'      => true,
+		'hierarchical'      => true,
+		'rewrite'           => array( 'slug' => 'directory-category' ),
 	);
 	register_taxonomy( 'directory_category', 'directory_item', $args );
 }
