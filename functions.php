@@ -70,11 +70,11 @@ function directory_register_post_types() {
 		'show_in_rest'      => true,
 		'has_archive'       => true,
 		'hierarchical'      => false,
-		'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+		'supports'          => array( 'title', 'excerpt' ),
 		'rewrite'           => array( 'slug' => 'directory-item' ),
 		'menu_icon'         => 'dashicons-list-view',
 	);
-	register_post_type( 'directory_item', $args );
+	register_post_type( 'directory-item', $args );
 }
 add_action( 'init', 'directory_register_post_types' );
 
@@ -90,8 +90,8 @@ function directory_register_taxonomies() {
 		'show_in_nav_menus' => true,
 		'show_in_rest'      => true,
 		'hierarchical'      => true,
-		'rewrite'           => array( 'slug' => 'directory-category' ),
+		'rewrite'           => array( 'slug' => 'directorio' ),
 	);
-	register_taxonomy( 'directory_category', 'directory_item', $args );
+	register_taxonomy( 'directory-category', 'directory-item', $args );
 }
 add_action( 'init', 'directory_register_taxonomies' );
