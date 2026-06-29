@@ -17,9 +17,16 @@ define( 'DIRECTORY_THEME_URI', get_template_directory_uri() );
  */
 function directory_theme_enqueue_scripts() {
 	wp_enqueue_style(
+		'directory-theme-bootstrap',
+		DIRECTORY_THEME_URI . '/css/bootstrap.css',
+		array(),
+		DIRECTORY_THEME_VERSION
+	);
+
+	wp_enqueue_style(
 		'directory-theme-styles',
 		DIRECTORY_THEME_URI . '/css/styles.css',
-		array(),
+		array( 'directory-theme-bootstrap' ),
 		DIRECTORY_THEME_VERSION
 	);
 }
