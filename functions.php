@@ -18,7 +18,7 @@ define( 'DIRECTORY_THEME_URI', get_template_directory_uri() );
 function directory_theme_enqueue_scripts() {
 	wp_enqueue_style(
 		'directory-theme-styles',
-		DIRECTORY_THEME_URI . '/css/main-directory-styles.css',
+		DIRECTORY_THEME_URI . '/css/styles.css',
 		array(),
 		DIRECTORY_THEME_VERSION
 	);
