@@ -29,5 +29,14 @@ function directory_theme_enqueue_scripts() {
 		array( 'directory-theme-bootstrap' ),
 		DIRECTORY_THEME_VERSION
 	);
+
+	if ( is_front_page() ) {
+		wp_enqueue_style(
+			'directory-theme-home',
+			DIRECTORY_THEME_URI . '/css/main.css',
+			array( 'directory-theme-styles' ),
+			DIRECTORY_THEME_VERSION
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_scripts' );
