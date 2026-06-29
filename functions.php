@@ -60,7 +60,7 @@ add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_scripts' );
 /**
  * Register custom post type: Directory Item
  */
-function directory_register_post_types() {
+function directory_theme_register_post_types() {
 	$args = array(
 		'label'             => __( 'Directory Items', 'directory' ),
 		'public'            => true,
@@ -76,12 +76,12 @@ function directory_register_post_types() {
 	);
 	register_post_type( 'directory-item', $args );
 }
-add_action( 'init', 'directory_register_post_types' );
+add_action( 'init', 'directory_theme_register_post_types' );
 
 /**
  * Register taxonomy for Directory Item
  */
-function directory_register_taxonomies() {
+function directory_theme_register_taxonomies() {
 	$args = array(
 		'label'             => __( 'Directory Categories', 'directory' ),
 		'public'            => true,
@@ -94,4 +94,4 @@ function directory_register_taxonomies() {
 	);
 	register_taxonomy( 'directory-category', 'directory-item', $args );
 }
-add_action( 'init', 'directory_register_taxonomies' );
+add_action( 'init', 'directory_theme_register_taxonomies' );
