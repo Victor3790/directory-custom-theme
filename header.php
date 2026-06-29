@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="container">
 				<div class="row">
 					<div class="col-6">
-						<a href="/index.html" class="m-0 menu__logo">Logo</a>
+						<a href="/index.html" class="m-0 menu__logo">JM</a>
 					</div>
 					<div class="col-6">
 						<nav aria-label="Main navigation">
