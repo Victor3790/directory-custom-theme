@@ -38,6 +38,15 @@ function directory_theme_enqueue_scripts() {
 			DIRECTORY_THEME_VERSION
 		);
 	}
+
+	if ( is_page( 'Directorio' ) || is_archive() ) {
+		wp_enqueue_style(
+			'directory-theme-archive',
+			DIRECTORY_THEME_URI . '/css/archive.css',
+			array( 'directory-theme-styles' ),
+			DIRECTORY_THEME_VERSION
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_scripts' );
 
