@@ -46,6 +46,13 @@ function directory_theme_enqueue_scripts() {
 			array( 'directory-theme-styles' ),
 			DIRECTORY_THEME_VERSION
 		);
+
+		wp_enqueue_style(
+			'directory-theme-breadcrumbs',
+			DIRECTORY_THEME_URI . '/css/breadcrumbs.css',
+			array( 'directory-theme-styles' ),
+			DIRECTORY_THEME_VERSION
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'directory_theme_enqueue_scripts' );
