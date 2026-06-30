@@ -33,8 +33,8 @@ get_header();
 					</div>
 				</div>
 				<?php
-				endwhile;
-			endif;
+			endwhile;
+		endif;
 		?>
 		<section class="row section archive-section">
 			<div class="col-12 col-lg-10 offset-lg-1">
