@@ -38,46 +38,22 @@ get_header();
 		?>
 		<section class="row section archive-section">
 			<div class="col-12 col-lg-10 offset-lg-1">
-				<article class="item">
-					<h2 class="item__title">
-						Category A
-					</h2>
-					<p class="item__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
-					</p>
-					<a href="dir-archive.html">Ver</a>
-				</article>
-				<hr>
-				<article class="item">
-					<h2 class="item__title">
-						Category B
-					</h2>
-					<p class="item__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
-					</p>
-					<a href="dir-archive.html">Ver</a>
-				</article>
-				<hr>
-				<article class="item">
-					<h2 class="item__title">
-						Category C
-					</h2>
-					<p class="item__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
-					</p>
-					<a href="dir-archive.html">Ver</a>
-				</article>
-				<hr>
-				<article class="item">
-					<h2 class="item__title">
-						Category D
-					</h2>
-					<p class="item__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
-					</p>
-					<a href="dir-archive.html">Ver</a>
-				</article>
-				<hr>
+				<?php
+				$term_args = array(
+					'taxonomy'   => 'directory-category',
+					'hide_empty' => false,
+					'orderby'    => 'name',
+					'order'      => 'ASC',
+				);
+
+				$dir_terms = get_terms( $term_args );
+
+				if ( ! empty( $dir_terms ) && ! is_wp_error( $dir_terms ) ) {
+					foreach ( $dir_terms as $dir_term ) {
+						get_template_part( 'template-parts/item', $dir_term->taxonomy, array( 'term' => $dir_term ) );
+					}
+				}
+				?>
 			</div>
 		</section>
 	</div>
