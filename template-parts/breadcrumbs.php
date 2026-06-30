@@ -14,6 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <nav aria-label="Breadcrumb">
 	<ul class="breadcrumbs">
 		<li><a class="breadcrumbs__link" href="<?php echo esc_url( home_url() ); ?>">Inicio</a></li> /
+
+		<?php if ( is_page() ) : ?>
+			<li class="breadcrumbs__link" aria-current="page"><?php echo esc_html( the_title() ); ?></li>
+		<?php endif; ?>
+
 		<li><a class="breadcrumbs__link" href=""> Dir</a></li> /
 		<li class="breadcrumbs__link" aria-current="page">Page</li>
 	</ul>
