@@ -14,29 +14,22 @@ get_header();
 ?>
 
 <main>
-	<!-- Breadcrumbs -->
 	<div class="container">
 		<div class="row">
 			<div class="col">
 				<!-- Breadcrumbs -->
-				<nav aria-label="Breadcrumb">
-					<ul class="breadcrumbs">
-						<li><a class="breadcrumbs__link" href="#">Home</a></li> /
-						<li><a class="breadcrumbs__link" href="#"> Dir</a></li> /
-						<li class="breadcrumbs__link" aria-current="page">Page</li>
-					</ul>
-				</nav>
+				<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-		<div class="col">
-			<h1 class="archive-title">Archive</h1>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas est dolor, maximus sit amet posuere nec, porta a neque. Praesent euismod pretium eros sed vestibulum. Vestibulum ac lacus odio. Proin sed sagittis nisi, ac efficitur leo. Aliquam a sapien dapibus, viverra risus quis, maximus turpis. Suspendisse potenti. Sed iaculis euismod libero sed molestie. Nulla feugiat risus ut ligula lobortis commodo. Etiam et diam mi. 
-			</p>
-		</div>
+			<div class="col">
+				<h1 class="archive-title"><?php single_term_title( '', true ); ?></h1>
+				<p>
+					<?php the_archive_description(); ?>
+				</p>
+			</div>
 		</div>
 		<section class="row section archive-section">
 		<div class="col-12 col-lg-10 offset-lg-1">
