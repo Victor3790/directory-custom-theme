@@ -89,6 +89,7 @@ function directory_theme_register_taxonomies() {
 		'show_in_menu'      => true,
 		'show_in_nav_menus' => true,
 		'show_in_rest'      => true,
+		'show_admin_column' => true,
 		'hierarchical'      => true,
 		'rewrite'           => array( 'slug' => 'directorio' ),
 	);
