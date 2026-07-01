@@ -70,7 +70,7 @@ function directory_theme_register_post_types() {
 		'show_in_rest'      => true,
 		'has_archive'       => true,
 		'hierarchical'      => false,
-		'supports'          => array( 'title', 'excerpt' ),
+		'supports'          => array( 'title', 'editor', 'excerpt' ),
 		'rewrite'           => array( 'slug' => 'directory-item' ),
 		'menu_icon'         => 'dashicons-list-view',
 	);
