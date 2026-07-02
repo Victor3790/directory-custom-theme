@@ -23,7 +23,7 @@ class Directory_Theme_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 * @param int      $id Current object id.
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		$output .= '<li class="me-3"><a class="menu__link" href="' . esc_url( $item->url ) . '">' . $item->title;
+		$output .= '<li><a href="' . esc_url( $item->url ) . '">' . $item->title;
 	}
 
 	/**
