@@ -4,6 +4,14 @@
   --gray: #495057;
 }
 
+body {
+  min-width: 450px;
+}
+
+main {
+  min-height: 100vh;
+}
+
 .m-0 {
   margin: 0 !important;
 }
