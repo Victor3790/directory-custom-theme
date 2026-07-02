@@ -8,6 +8,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
+
+require_once DIRECTORY_THEME_DIR . '/includes/class-directory-theme-walker-nav-menu.php';
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
