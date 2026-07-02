@@ -97,3 +97,18 @@ function directory_theme_register_taxonomies() {
 	register_taxonomy( 'directory-category', 'directory-item', $args );
 }
 add_action( 'init', 'directory_theme_register_taxonomies' );
+
+/**
+ * Add theme support for various features
+ */
+function directory_theme_setup() {
+	// Title tag support.
+	add_theme_support( 'title-tag' );
+
+	register_nav_menus(
+		array(
+			'primary' => __( 'Primary Menu', 'directory' ),
+		)
+	);
+}
+add_action( 'after_setup_theme', 'directory_theme_setup' );
