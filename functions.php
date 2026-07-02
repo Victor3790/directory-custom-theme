@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'DIRECTORY_THEME_VERSION', '1.0.0' );
+define( 'DIRECTORY_THEME_DIR', get_template_directory() );
 define( 'DIRECTORY_THEME_URI', get_template_directory_uri() );
 
 /**
