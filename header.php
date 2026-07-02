@@ -29,10 +29,16 @@ require_once DIRECTORY_THEME_DIR . '/includes/class-directory-theme-walker-nav-m
 					</div>
 					<div class="col-6">
 						<nav aria-label="Main navigation">
-							<ul class="menu__list">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="cat-archive.html">Directorio</a></li>
-							</ul>
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'primary',
+									'container'      => 'ul',
+									'menu_class'     => 'menu__list',
+									'walker'         => new Directory_Theme_Walker_Nav_Menu(),
+								)
+							);
+							?>
 						</nav>
 					</div>
 				</div>
